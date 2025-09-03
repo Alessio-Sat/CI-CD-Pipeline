@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Tutorial - Getting Started</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button class="back-button" onclick="window.location.href = 'index.html'">← Back to User Guides</button>
+        <header>
+            <h1>Jira & Discord Integration</h1>
+            <p class="subtitle">How to use Jira and Discord to manage your projects</p>
+        </header>
+        
+        <main>
+        <section class="tutorial-step">
+            <div class="step-header">
+                <div class="step-number">6</div>
+                <h2>Creating a JIRA Ticket (Work Item)</h2>
+            </div>
+            <div class="step-content">
+                <p class="description">
+                    A requirement comes from business for which a JIRA ticket is created (either by the Business User or by the Business Analyst)
+                </p>
+                <div class="gif-container">
+                    <img src="media/jira_ticket_creation_1.gif" alt="Jira ticket creation 1">
+                </div>
+                <div class="tip">
+                    💡 Note how TEST002, created as <b>SCRUM-14 TEST002</b>, first appears in the <b>“Backlog”</b> section for follow up.
+                </div>
+                <p class="description">
+                    The Business Analysts reviews the request, and if accepted, pushes the JIRA ticket to the chosen SPRINT.
+                </p>
+                <div class="gif-container">
+                    <img src="media/jira_ticket_creation_2.gif" alt="Jira ticket creation 2">
+                </div>
+                <div class="tip">
+                    💡 Note how <b>changing the value to “SCRUM Sprint 1”</b> puts the ticket in the <b>“Board”</b> section.
+                </div>
+            </div>
+        </section>
+
+        <section class="tutorial-step">
+            <div class="step-header">
+                <div class="step-number">7</div>
+                <h2>From JIRA to GitHub: <i>development</i> phase</h2>
+            </div>
+            <div class="step-content">
+                <p class="description">
+                    A notification appears on Discord, in the dedicated “new issues” channel. A Developer can then simply click the link to JIRA and assign the ticket to himself.
+                </p>
+                <div class="gif-container">
+                    <img src="media/discord_jira_notifications.gif" alt="Discord Jira notifications">
+                </div>
+                <div class="tip">
+                    💡 Note how a <b>discord notification</b> is sent when the ticket gets <b>assigned</b> to a developer.
+                </div>
+                <div class="gif-container">
+                    <img src="media/new_jira_branch_and_PR_to_main.gif" alt="New Jira branch and PR to main">
+                </div>
+                <div class="tip">
+                    ‼️ <b>AUTOMATICALLY</b> a branch is created in GitHub, with the <b>JIRA Ticket Number</b> as the branch name. The developer can work on his code and push to the branch once a release candidate is ready.
+                    The JIRA ticket will then change to <b>“Release Candidate”</b>.
+                </div>
+            </div>
+        </section>
+
+        <section class="tutorial-step">
+            <div class="step-header">
+                <div class="step-number">8</div>
+                <h2>Closing the Ticket</h2>
+            </div>
+            <div class="step-content">
+                <p class="description">
+                    After validation, the JIRA Ticket is then closed, and with it the full Ticket cycle.
+                </p>
+                <div class="gif-container">
+                    <img src="media/jira_closing_ticket.gif" alt="Jira closing ticket">
+                </div>
+            </div>
+        </section>
+
+        </main>
+
+        <footer>
+            <p>Need more help? Visit our <a href="#" style="color: #3498db;">Help Center</a></p>
+            <p style="margin-top: 10px;">© 2025 Artelis 360 Web Portal. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

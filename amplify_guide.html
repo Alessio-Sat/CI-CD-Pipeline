@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Tutorial - Getting Started</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button class="back-button" onclick="window.location.href = 'index.html'">← Back to User Guides</button>
+        <header>
+            <h1>AWS Amplify CI/CD Pipeline</h1>
+            <p class="subtitle">How to deploy an app on AWS Amplify</p>
+        </header>
+
+        <main>
+            <section class="tutorial-step">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <h2>Create your application</h2>
+                </div>
+                <div class="step-content">
+                    <p class="description">
+                        Get started by creating your application and publishing it on GitHub.
+                    </p>
+                    <div class="gif-container">
+                        <img src="media/app_before_changes.gif" alt="Application before changes">
+                    </div>
+                </div>
+            </section>
+            
+            <section class="tutorial-step">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <h2>Make changes on your project</h2>
+                </div>
+                <div class="step-content">
+                    <p class="description">
+                        Make changes on your project, commit them and push them to GitHub.
+                    </p>
+                    <div class="gif-container">
+                        <img src="media/vsc_changes.gif" alt="Visual Studio Code changes">
+                    </div>
+                    <div class="gif-container">
+                        <img src="media/github_push_1.gif" alt="GitHub push part 1">
+                    </div>
+                    <div class="tip">
+                        ‼️ <b>Attention:</b> Note how we are pushing the changes to the staging branch.
+                    </div>
+                    <div class="gif-container">
+                        <img src="media/github_push_2.gif" alt="GitHub push part 2">
+                    </div>
+                    <div class="tip">
+                        💡 Give a <b>descriptive title to your commit</b>. This will also appear in the <b>AWS Amplify deployment history</b>.
+                    </div>
+                </div>
+            </section>
+            
+            <section class="tutorial-step">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <h2>Deploying on AWS Amplify</h2>
+                </div>
+                <div class="step-content">
+                    <p class="description">
+                        Once you have pushed your changes to GitHub, AWS Amplify will automatically detect the changes and deploy them.
+                    </p>
+                    <div class="gif-container">
+                        <img src="media/github_show_commit.gif" alt="GitHub commit">
+                    </div>
+                    <div class="gif-container">
+                        <img src="media/amplify_deploying.gif" alt="Amplify deploy">
+                    </div>
+                    <div class="tip">
+                        ‼️ <b>Attention:</b> Note how AWS Amplify is <b>automatically detecting</b> the changes on the linked branch and deploying them.
+                    </div>
+                    <div class="gif-container">
+                        <img src="media/amplify_show_changes.gif" alt="Amplify changes">
+                    </div>
+                    <div class="tip">
+                        💡 Once it's <b>done deploying</b>, you will see your changes <b>live</b> on AWS Amplify.
+                    </div>
+                </div>
+            </section>
+
+            <section class="tutorial-step">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <h2>Redeploy the application on a different server</h2>
+                </div> 
+                <div class="step-content">
+                    <p class="description">
+                        Select the server you want to deploy your application on. Then click on the <i>Deploy an app</i> button.
+                    </p>
+                    <div class="gif-container">
+                        <img src="media/amplify_setup_1.gif" alt="Amplify setup 1">
+                    </div>
+                    <p class="description">
+                        Link your GitHub repository to AWS Amplify. You will have to authorize AWS Amplify to access your repository.
+                    </p>
+                    <div class="gif-container">
+                        <img src="media/amplify_setup_2.gif" alt="Amplify setup 2">
+                    </div>
+                    <p class="description">
+                        Select the project's branch you want to deploy. Then click on <i>Save and deploy</i>.
+                    </p>
+                    <div class="gif-container">
+                        <img src="media/amplify_setup_3.gif" alt="Amplify setup 3">
+                    </div>
+                </div>
+            </section>
+
+            <section class="tutorial-step">
+                <div class="step-header">
+                    <div class="step-number">5</div>
+                    <h2>Deploying other branches</h2>
+                </div>
+                <div class="step-content">
+                    <p class="description">
+                        You can deploy other branches by clicking on the <i>Add branch</i> button.
+                    </p>
+                    <div class="gif-container">
+                        <img src="media/amplify_add_branch_1.gif" alt="Amplify add branch 1">
+                    </div>
+                    <div class="gif-container">
+                        <img src="media/amplify_add_branch_2.gif" alt="Amplify add branch 2">
+                    </div>
+                    <div class="tip">
+                        💡 Note how <b>each branch is deployed separately</b>. This allows you to keep working on your application while keeping the <b>production version stable</b>.
+                    </div>
+                </div>
+            </section>
+        </main>
+            
+        <footer>
+            <p>Need more help? Visit our <a href="#" style="color: #3498db;">Help Center</a></p>
+            <p style="margin-top: 10px;">© 2025 Artelis 360 Web Portal. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

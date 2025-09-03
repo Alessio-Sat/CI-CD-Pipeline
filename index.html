@@ -3,207 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Tutorial - Getting Started</title>
+    <title>User Guides</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>CI/CD Pipeline</h1>
-            <p class="subtitle">How to deploy an app on AWS Amplify</p>
-        </header>
-        
-        <main>
-            <section class="tutorial-step">
-                <div class="step-header">
-                    <div class="step-number">1</div>
-                    <h2>Create your application</h2>
-                </div>
-                <div class="step-content">
-                    <p class="description">
-                        Get started by creating your application and publishing it on GitHub.
-                    </p>
-                    <div class="gif-container">
-                        <img src="media/app_before_changes.gif" alt="Application before changes">
-                    </div>
-                </div>
-            </section>
-            
-            <section class="tutorial-step">
-                <div class="step-header">
-                    <div class="step-number">2</div>
-                    <h2>Make changes on your project</h2>
-                </div>
-                <div class="step-content">
-                    <p class="description">
-                        Make changes on your project, commit them and push them to GitHub.
-                    </p>
-                    <div class="gif-container">
-                        <img src="media/vsc_changes.gif" alt="Visual Studio Code changes">
-                    </div>
-                    <div class="gif-container">
-                        <img src="media/github_push_1.gif" alt="GitHub push part 1">
-                    </div>
-                    <div class="tip">
-                        ‼️ <b>Attention:</b> Note how we are pushing the changes to the staging branch.
-                    </div>
-                    <div class="gif-container">
-                        <img src="media/github_push_2.gif" alt="GitHub push part 2">
-                    </div>
-                    <div class="tip">
-                        💡 Give a <b>descriptive title to your commit</b>. This will also appear in the <b>AWS Amplify deployment history</b>.
-                    </div>
-                </div>
-            </section>
-            
-            <section class="tutorial-step">
-                <div class="step-header">
-                    <div class="step-number">3</div>
-                    <h2>Deploying on AWS Amplify</h2>
-                </div>
-                <div class="step-content">
-                    <p class="description">
-                        Once you have pushed your changes to GitHub, AWS Amplify will automatically detect the changes and deploy them.
-                    </p>
-                    <div class="gif-container">
-                        <img src="media/github_show_commit.gif" alt="GitHub commit">
-                    </div>
-                    <div class="gif-container">
-                        <img src="media/amplify_deploying.gif" alt="Amplify deploy">
-                    </div>
-                    <div class="tip">
-                        ‼️ <b>Attention:</b> Note how AWS Amplify is <b>automatically detecting</b> the changes on the linked branch and deploying them.
-                    </div>
-                    <div class="gif-container">
-                        <img src="media/amplify_show_changes.gif" alt="Amplify changes">
-                    </div>
-                    <div class="tip">
-                        💡 Once it's <b>done deploying</b>, you will see your changes <b>live</b> on AWS Amplify.
-                    </div>
-                </div>
-            </section>
+    <header>
+        <h1>User Guides</h1>
+        <p class="subtitle">Select a guide to get started</p>
+    </header>
 
-            <section class="tutorial-step">
-                <div class="step-header">
-                    <div class="step-number">4</div>
-                    <h2>Redeploy the application on a different server</h2>
-                </div> 
-                <div class="step-content">
-                    <p class="description">
-                        Select the server you want to deploy your application on. Then click on the <i>Deploy an app</i> button.
-                    </p>
-                    <div class="gif-container">
-                        <img src="media/amplify_setup_1.gif" alt="Amplify setup 1">
-                    </div>
-                    <p class="description">
-                        Link your GitHub repository to AWS Amplify. You will have to authorize AWS Amplify to access your repository.
-                    </p>
-                    <div class="gif-container">
-                        <img src="media/amplify_setup_2.gif" alt="Amplify setup 2">
-                    </div>
-                    <p class="description">
-                        Select the project's branch you want to deploy. Then click on <i>Save and deploy</i>.
-                    </p>
-                    <div class="gif-container">
-                        <img src="media/amplify_setup_3.gif" alt="Amplify setup 3">
-                    </div>
+    <main style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 20px;">
+        <div class="cards-container">
+            <div class="card" onclick="navigateToGuide('amplify')">
+                <div class="card-image" style="background-image: url('https://picsum.photos/seed/beginner/350/200.jpg');"></div>
+                <div class="card-content">
+                    <h2 class="card-title">Amplify Setup & CI/CD Pipeline</h2>
+                    <p class="card-description">Learn how to setup and deploy your application on AWS Amplify.</p>
+                    <a class="card-button" onclick="navigateToGuide('amplify')">View Guide</a>
                 </div>
-            </section>
+            </div>
 
-            <section class="tutorial-step">
-                <div class="step-header">
-                    <div class="step-number">5</div>
-                    <h2>Deploying other branches</h2>
+            <div class="card" onclick="navigateToGuide('jira')">
+                <div class="card-image" style="background-image: url('https://picsum.photos/seed/advanced/350/200.jpg');"></div>
+                <div class="card-content">
+                    <h2 class="card-title">JIRA & GitHub Integration</h2>
+                    <p class="card-description">Learn how to use JIRA and GitHub to manage your projects.</p>
+                    <a class="card-button" onclick="navigateToGuide('jira')">View Guide</a>
                 </div>
-                <div class="step-content">
-                    <p class="description">
-                        You can deploy other branches by clicking on the <i>Add branch</i> button.
-                    </p>
-                    <div class="gif-container">
-                        <img src="media/amplify_add_branch_1.gif" alt="Amplify add branch 1">
-                    </div>
-                    <div class="gif-container">
-                        <img src="media/amplify_add_branch_2.gif" alt="Amplify add branch 2">
-                    </div>
-                    <div class="tip">
-                        💡 Note how <b>each branch is deployed separately</b>. This allows you to keep working on your application while keeping the <b>production version stable</b>.
-                    </div>
-                </div>
-            </section>
-            
-            <section class="tutorial-step">
-                <div class="step-header">
-                    <div class="step-number">6</div>
-                    <h2>Creating a JIRA Ticket (Work Item)</h2>
-                </div>
-                <div class="step-content">
-                    <p class="description">
-                        A requirement comes from business for which a JIRA ticket is created (either by the Business User or by the Business Analyst)
-                    </p>
-                    <div class="gif-container">
-                        <img src="media/jira_ticket_creation_1.gif" alt="Jira ticket creation 1">
-                    </div>
-                    <div class="tip">
-                        💡 Note how TEST002, created as <b>SCRUM-14 TEST002</b>, first appears in the <b>“Backlog”</b> section for follow up.
-                    </div>
-                    <p class="description">
-                        The Business Analysts reviews the request, and if accepted, pushes the JIRA ticket to the chosen SPRINT.
-                    </p>
-                    <div class="gif-container">
-                        <img src="media/jira_ticket_creation_2.gif" alt="Jira ticket creation 2">
-                    </div>
-                    <div class="tip">
-                        💡 Note how <b>changing the value to “SCRUM Sprint 1”</b> puts the ticket in the <b>“Board”</b> section.
-                    </div>
-                </div>
-            </section>
-            
-            <section class="tutorial-step">
-                <div class="step-header">
-                    <div class="step-number">7</div>
-                    <h2>From JIRA to GitHub: <i>development</i> phase</h2>
-                </div>
-                <div class="step-content">
-                    <p class="description">
-                        A notification appears on Discord, in the dedicated “new issues” channel. A Developer can then simply click the link to JIRA and assign the ticket to himself.
-                    </p>
-                    <div class="gif-container">
-                        <img src="media/discord_jira_notifications.gif" alt="Discord Jira notifications">
-                    </div>
-                    <div class="tip">
-                        💡 Note how a <b>discord notification</b> is sent when the ticket gets <b>assigned</b> to a developer.
-                    </div>
-                    <div class="gif-container">
-                        <img src="media/new_jira_branch_and_PR_to_main.gif" alt="New Jira branch and PR to main">
-                    </div>
-                    <div class="tip">
-                        ‼️ <b>AUTOMATICALLY</b> a branch is created in GitHub, with the <b>JIRA Ticket Number</b> as the branch name. The developer can work on his code and push to the branch once a release candidate is ready.
-                        The JIRA ticket will then change to <b>“Release Candidate”</b>.
-                    </div>
-                </div>
-            </section>
+            </div>
+        </div>
+    </main>
 
-            <section class="tutorial-step">
-                <div class="step-header">
-                    <div class="step-number">8</div>
-                    <h2>Closing the Ticket</h2>
-                </div>
-                <div class="step-content">
-                    <p class="description">
-                        After validation, the JIRA Ticket is then closed, and with it the full Ticket cycle.
-                    </p>
-                    <div class="gif-container">
-                        <img src="media/jira_closing_ticket.gif" alt="Jira closing ticket">
-                    </div>
-                </div>
-            </section>
-            
-        </main>
-            
-        <footer>
-            <p>Need more help? Visit our <a href="#" style="color: #3498db;">Help Center</a></p>
-            <p style="margin-top: 10px;">© 2025 Artelis 360 Web Portal. All rights reserved.</p>
-        </footer>
-    </div>
+    <footer>
+        <p>Need more help? Visit our <a href="#" style="color: #3498db;">Help Center</a></p>
+        <p style="margin-top: 10px;">© 2025 Artelis 360 Web Portal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function navigateToGuide(guideType) {
+            // In a real implementation, replace these URLs with actual guide URLs
+            if (guideType === 'amplify') {
+                window.location.href = 'amplify_guide.html';
+            } else if (guideType === 'jira') {
+                window.location.href = 'jira_discord.html';
+            }
+        }
+
+        // Prevent default link behavior
+        document.querySelectorAll('.card-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const card = this.closest('.card');
+                card.click();
+            });
+        });
+    </script>
 </body>
 </html>
